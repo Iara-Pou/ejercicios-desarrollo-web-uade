@@ -1,0 +1,43 @@
+* {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+h1 {
+  color: #bae8e8;
+}
+
+h2 {
+  color: #7f5af0;
+}
+
+main p strong {
+  color: #94a1b2;
+}
+
+.rosa {
+  color: #e53170;
+}
+
+.verde {
+  color: #2cb67d;
+}
+
+.letra-grande {
+  font-size: 1.2rem;
+}
+
+#contenedor {
+  padding: 3em 10em;
+}
+
+#amarillo {
+  color: #faae2b;
+}
+
+#naranja {
+  color: #fa5246;
+}
+
+#rosa-claro {
+  color: #ffa8ba;
+}

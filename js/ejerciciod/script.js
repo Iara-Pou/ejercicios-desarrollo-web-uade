@@ -1,21 +1,24 @@
 function CalcularImpuesto(precio, iva) {
-  /*Los valores deben ser pasados a los parámetros de la función CalcularImpuesto, que calcula el IVA seleccionado y devuelve el siguiente mensaje:
-Precio: valor – IVA: iva% – Total: valor con iva
-El mensaje debe ser devuelto por la función e informado con un console.log(). */
+  // Calcular el precio final con IVA
   const PRECIO_FINAL = precio * (1 + iva / 100);
-  console.log(
-    `Precio: ${precio} – ${iva}: ${iva}% – Total: ${PRECIO_FINAL.toFixed(2)}`
-  );
+
+  // Devolver el mensaje
+  return `Precio: ${precio.toFixed(
+    2
+  )} – IVA: ${iva}% – Total: ${PRECIO_FINAL.toFixed(2)}`;
 }
 
 function IngresarPrecio() {
   let precioProducto = parseFloat(
     prompt("Ingresar el precio del producto: \n$: ")
   );
-  //validar precio
-  while (isNaN(precioProducto)) {
+
+  // Validar precio
+  while (isNaN(precioProducto) || precioProducto <= 0) {
     precioProducto = parseFloat(
-      prompt("No ingresaste un número. \nIngresar nuevamente el precio: \n$: ")
+      prompt(
+        "No ingresaste un número válido. \nIngresar nuevamente el precio: \n$: "
+      )
     );
   }
 
@@ -24,17 +27,18 @@ function IngresarPrecio() {
 
 function IngresarIVA() {
   let IVAProducto = parseInt(
-    prompt("Ingresar el IVA a aplicar en el producto: ")
+    prompt("Ingresar el IVA a aplicar en el producto (entre 0 y 100): ")
   );
 
+  // Si no se ingresa un IVA válido, asignar el valor por defecto (21)
   if (isNaN(IVAProducto)) {
     IVAProducto = 21;
   } else {
-    //validar IVA
+    // Validar que esté entre 0 y 100
     while (IVAProducto < 0 || IVAProducto > 100) {
       IVAProducto = parseInt(
         prompt(
-          "No ingresaste un número entre el 0 y el 100. \nIngresar nuevamente el IVA: \n$: "
+          "El IVA debe estar entre 0 y 100. \nIngresar nuevamente el IVA: "
         )
       );
     }
@@ -43,21 +47,17 @@ function IngresarIVA() {
   return IVAProducto;
 }
 
-function CalcularImpuesto() {
-  //ingresar el precio del producto, IVA
+function EjecutarCalculo() {
+  // Ingresar el precio y el IVA
   const PRECIO_PRODUCTO = IngresarPrecio();
   const IVA_PRODUCTO = IngresarIVA();
-  //calcular iva y mostrarlo
-  CalcularImpuesto(PRECIO_PRODUCTO, IVA_PRODUCTO);
+
+  // Calcular y mostrar el resultado
+  const resultado = CalcularImpuesto(PRECIO_PRODUCTO, IVA_PRODUCTO);
+  console.log(resultado);
 }
 
-/*Los valores deben ser pasados a los parámetros de la función CalcularImpuesto, que calcula el IVA seleccionado y devuelve el siguiente mensaje:
-Precio: valor – IVA: iva% – Total: valor con iva
-El mensaje debe ser devuelto por la función e informado con un console.log().
-La función debe verificar que los datos sean válidos (en caso contrario notificarlo).
-La función no hace el ingreso ni el egreso de valores por parte del usuario.
-No se pueden utilizar variables globales. */
-
+// Asignar el evento al botón
 document
   .getElementById("calcular-impuesto")
-  .addEventListener("click", CalcularImpuesto);
+  .addEventListener("click", EjecutarCalculo);

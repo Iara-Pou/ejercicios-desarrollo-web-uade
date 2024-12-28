@@ -1,5 +1,4 @@
 <!--Tenemos una especie de "calculadora", con 7 botones:
-2 para ingresar valores numéricos; 4 para realizar una operación aritmética; Uno que muestra el resultado.
 Ya tienen una función asignada a su onclick:
 ObtenerNumero1, ObtenerNumero2, Operacion, Mostrar.
 El funcionamiento debe ser el siguiente:
@@ -11,9 +10,8 @@ se deben utilizar variables globales.
 Extra: crear una función para ingresar y validar un número.
 -->
 
-</lightning-tab>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,6 +19,23 @@ Extra: crear una función para ingresar y validar un número.
 </head>
 
 <body>
+    <h1>Calculadora</h1>
+    <div>
+        <p>Ingresar números</p>
+        <button onclick="ObtenerNumero1()">Numero 1</button>
+        <button onclick="ObtenerNumero2()">Numero 2</button>
+    </div>
+    <div>
+        <p>Seleccionar operación</p>
+        <button onclick='Operacion(event)'>+</button>
+        <button onclick='Operacion(event)'>-</button>
+        <button onclick='Operacion(event)'>/</button>
+        <button onclick='Operacion(event)'>*</button>
+    </div>
+    <br>
+    <div>
+        <button onclick="Mostrar()" id="resultado">Generar resultado</button>
+    </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>
 

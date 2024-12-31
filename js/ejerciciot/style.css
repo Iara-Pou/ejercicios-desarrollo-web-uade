@@ -1,0 +1,44 @@
+.contenedor {
+  display: flex;
+  padding: 2em;
+  gap: 2em;
+}
+
+.ventana-foto {
+  height: 70vh;
+  width: 70%;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedor-fotos {
+  height: 40vh;
+  width: 30%;
+  background-color: rgb(230, 229, 229);
+  border-radius: 6px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 2em 1em;
+  justify-content: center;
+}
+
+.foto {
+  width: 32%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.foto:hover {
+  width: 32%;
+  height: 52%;
+}
+
+.foto-seleccionada {
+  opacity: 50%;
+}

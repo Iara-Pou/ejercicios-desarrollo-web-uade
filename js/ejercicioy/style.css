@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+div {
+  background-color: gray;
+  height: 190px;
+  width: 30px;
+}
+
+.div-seleccionado {
+  height: 265px;
+}

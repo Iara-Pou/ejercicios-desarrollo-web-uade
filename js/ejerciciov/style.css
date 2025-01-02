@@ -1,0 +1,22 @@
+.marco {
+  display: inline-block;
+  height: 30em;
+  width: auto;
+  margin: 1em;
+}
+
+.marco img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.marco-secundario {
+  opacity: 70%;
+  transition: all 0.3s;
+}
+
+.marco-secundario:hover {
+  cursor: pointer;
+  opacity: 90%;
+}

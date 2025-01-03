@@ -1,0 +1,27 @@
+<!--Se debe generar una ventana modal partiendo de la imagen a la que se le hace click.
+La estructura debe ser un div, con un link, una imagen y un párrafo (ver referencia en el documento).
+Cuando se hace click en el link de la ventana modal, debe desaparecer la ventana modal.
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio U</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <img src="https://i.ytimg.com/vi/pvgSb7ttmVc/maxresdefault.jpg" alt="Imagen con texto 'apretame'." id="abrir-modal">
+    <div id="modal" class="hidden">
+        <a href="https://i.ytimg.com/vi/pvgSb7ttmVc/maxresdefault.jpg" target="_blank" id="cerrar-modal">Cerrar
+            modal</a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgceCcHaKcvoth21sln_8YzI6tRD2ZJuB-A&s"
+            alt="Signo de pregunta">
+        <p>Hola, este es un modal interactivo.</p>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>

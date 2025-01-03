@@ -1,0 +1,46 @@
+.contenedor {
+  display: flex;
+  padding: 2em 10em;
+  justify-content: center;
+  align-items: center;
+}
+
+.marco {
+  display: inline-block;
+  height: 30em;
+  width: auto;
+  margin: 1em;
+}
+
+.marco img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+button {
+  border-radius: 50%;
+  font-size: 2em;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  height: 2em;
+  width: 2em;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #ff8bb1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #f73374;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
